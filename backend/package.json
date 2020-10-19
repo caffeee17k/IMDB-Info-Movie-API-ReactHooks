@@ -1,0 +1,28 @@
+{
+  "name": "andrey-dos-santos-passos",
+  "version": "1.0.0",
+  "description": "Este é um simples teste para o qual você desenvolverá uma aplicação de acordo com os requisitos e orientações neste documento.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Instituto-Atlantico/andrey-dos-santos-passos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Instituto-Atlantico/andrey-dos-santos-passos/issues"
+  },
+  "homepage": "https://github.com/Instituto-Atlantico/andrey-dos-santos-passos#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
