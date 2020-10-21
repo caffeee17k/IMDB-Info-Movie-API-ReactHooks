@@ -5,6 +5,7 @@ const routes = express.Router();
 
 
 routes.get('/', MovieController.Show);
+routes.post('/', MovieController.Show);
 
 
 module.exports = routes;
