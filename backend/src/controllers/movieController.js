@@ -5,7 +5,7 @@ const key = "4b4cbc93";
 module.exports = {
     async Show(req, res) {
        // return res.json({ ok: true });
-        const { searchMovie } = req.body;
+        const { searchMovie } = req.query;
 
         // console.log(req.query);
         // console.log(req.body);

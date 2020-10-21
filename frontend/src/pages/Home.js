@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Home.css';
 
 import api from '../services/api';
+import Cards from '../components/Cards';
 
 export default function Home() {
     const [searchMovie, setSearchMovie] = useState([]);
@@ -15,18 +16,21 @@ export default function Home() {
         // console.log(searchMovie);
 
         //request api via req.query 
-        // const response = await api.get(`/?searchMovie=${searchMovie}`);
+        api.get(`/?searchMovie=${searchMovie}`)
+            .then(res => {
+                setMovies(res.data.Search)
+                console.log(movies)
+            })
 
-        const response = await api.post('/', {
-            searchMovie,
-        }).then(res => {
-            setMovies(res.data)
-            
-        });
+        //request api via req.body
+        // const response = await api.post('/', {
+        //     searchMovie,
+        // });
+
 
         //  movies = response.data.Search;
-        console.log(response.data);
-        console.log(movies);
+        // console.log(response.data);
+
         //history.push('/movie');
     }
 
@@ -42,13 +46,32 @@ export default function Home() {
                 />
                 <button type="submit">Pesquisar</button>
             </form>
-            
-            <main>
-                <h1>
-                {/* {movies.map()} */}
-                </h1>
-                
-            </main>
+            {/* chamada do Card */}
+            <div className="row">
+                {movies.map((movie, index) => (
+
+                    <Cards movie={movie} index={index} />
+
+                ))}
+            </div>
+
+            {/* <main className="row">
+                Buscas com o map()
+                <ul className="list-group">
+                    {movies.map((movie, index) => (
+                        <li key={index} className="list-group-item">
+                            {movie.Title}
+                        </li>
+                    ))}
+                </ul>
+                <ul className="list-group">
+                    {movies.map((movie, index) => (
+                        <li key={index} className="list-group-item">
+                            <Cards movie={movie} />
+                        </li>
+                    ))}
+                </ul>
+            </main> */}
         </div>
     );
 }

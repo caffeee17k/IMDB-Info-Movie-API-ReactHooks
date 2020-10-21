@@ -1,8 +1,10 @@
 .search-container {
     height: 50%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 .search-container form {
@@ -10,6 +12,7 @@
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .search-container form h1 {
@@ -36,4 +39,10 @@
     font-weight: bold;
     color: ivory;
     cursor: pointer;
+}
+
+.search-container div .row{
+    margin-top: auto;
+    align-content: center;
+    
 }
