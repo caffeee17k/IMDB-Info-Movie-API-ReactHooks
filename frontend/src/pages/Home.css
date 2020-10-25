@@ -1,10 +1,11 @@
 .search-container {
+    
     height: 50%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    
 }
 
 .search-container form {
@@ -38,11 +39,15 @@
     background: dodgerblue;
     font-weight: bold;
     color: ivory;
-    cursor: pointer;
 }
 
-.search-container div .row{
-    margin-top: auto;
-    align-content: center;
-    
+.search-container .row {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0px 160px;
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    padding-top: 1rem;
 }

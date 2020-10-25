@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+import api from '../services/api';
 import './Movie.css';
 
-export default function Movie() {
+import CardMovie from '../components/CardMovie';
+
+export default function Movie({ match }) {
+    // console.log(match);
+    const [getMovie, setGetMovie] = useState([]);
+
+    useEffect(() => {
+        async function fetchMovie() {
+            await api.get(`/movie/?getMovie=${match.params.id}`)
+                .then(res => {
+                    console.log(res.data);
+                    setGetMovie(res.data);
+                    //setLoading(false)
+                })
+            // console.log('movie', match.params.id);
+        }
+        fetchMovie();
+    }, [match.params.id])
+
     return (
         <div>
-            <h1>hi</h1>
+            {/* Teste dos dados em tela */}
+            {/* {JSON.stringify(getMovie)} */}
+            
+            <>            
+                <CardMovie getMovie={getMovie}/>                
+            </>
         </div>
-    );
+    )
+
 }

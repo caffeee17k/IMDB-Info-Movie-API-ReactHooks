@@ -1,0 +1,38 @@
+.col-md-4 {
+    margin-top: 20px;
+    border: 1px solid slategray;
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 15px 10px 20px 200px;
+    
+}
+.card {
+    max-height: 100%;
+    text-align: center;
+    
+}
+.col-md-4 ul {
+    list-style: none;
+    display: grid;
+    
+}
+.col-md-4 ul li img {
+    cursor: pointer;
+    max-width: 50%;
+    margin-top: 20px;
+    
+    
+}
+.col-md-4 button {
+    margin-top: 20px;
+    border: 1;
+    border-radius: 10px;
+    height: 48px;
+    font-size: 17px;
+    background: dodgerblue;
+    font-weight: bold;
+    color: ivory;
+    padding: 5px 10px 5px 10px;
+    
+}
+
