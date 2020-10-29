@@ -13,7 +13,7 @@ export default function Movie({ match }) {
         async function fetchMovie() {
             await api.get(`/movie/?getMovie=${match.params.id}`)
                 .then(res => {
-                    console.log(res.data);
+                    // console.log(res.data);
                     setGetMovie(res.data);
                     //setLoading(false)
                 })
@@ -26,7 +26,6 @@ export default function Movie({ match }) {
         <div>
             {/* Teste dos dados em tela */}
             {/* {JSON.stringify(getMovie)} */}
-            
             <>            
                 <CardMovie getMovie={getMovie}/>                
             </>

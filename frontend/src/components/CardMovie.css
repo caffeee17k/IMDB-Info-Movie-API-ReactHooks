@@ -1,0 +1,32 @@
+.card-body button  {
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 48px;
+    font-size: 17px;
+    font-weight: bold;
+    color: ivory;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+  .imdb {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.container .row .col-md-8 .list-group{
+    border-radius: 10px;
+}
+
+.container .row .img-card{
+    border-radius: 10px;
+}
+
+.container .row .more-footer {
+    border-radius: 10px;
+}
+

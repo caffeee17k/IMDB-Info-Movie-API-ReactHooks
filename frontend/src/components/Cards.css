@@ -23,13 +23,13 @@
     
     
 }
-.col-md-4 button {
+.col-md-4 .card-body button {
     margin-top: 20px;
     border: 1;
     border-radius: 10px;
     height: 48px;
     font-size: 17px;
-    background: dodgerblue;
+    background: darkslategray;
     font-weight: bold;
     color: ivory;
     padding: 5px 10px 5px 10px;
